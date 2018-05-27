@@ -1,16 +1,11 @@
-# Pixel Art Maker Project
+# Udacity - Pixel Art Maker Project
 
-## Table of Contents
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+## What?
+A Pixel Art Maker! Just choose the grid size, the colours and you're ready to draw!
 
-## Instructions
+## How?
+It's made on HTML, CSS, JS and JQuery.
 
-To get started, open `designs.js` and start building out the app's functionality.
-
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+## Where?
+A live example can be checked [here](http://www.thaissa.me/project-pixel-art-maker-starter)
