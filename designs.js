@@ -1,20 +1,33 @@
 // Select color input
-var color = $("#inputColorPicker").val();
+const color = $("#inputColorPicker").val();
 
 // Select size input
-var height = $("#inputHeight").val();
-var width = $("#inputWidth").val();;
+const row_input = $("#inputHeight");
+const column_input = $("#inputWidth");
 
 // When size is submitted by the user, call makeGrid()
-$("#sizePicker").on('submit', makeGrid());
+$("#sizePicker").on('submit', function(event){
+    event.preventDefault();
+    makeGrid();
+});
+
+
+// Coloring listener
+$(".cell").on('click', function(){
+    $(this).css('background-color', color);
+});
 
 function makeGrid() {
 // Your code goes here!
+    let row_count = row_input.val();
+    let column_count = column_input.val();
+
     var content = '';
-    for (i=0; i < height; i++){
+
+    for (i=0; i < row_count; i++){
         content += '<tr>';
-        for(j=0; j < width;j++){
-            content += '<td class=".cell"></td>';
+        for(j=0; j < column_count ;j++){
+            content += '<td class="cell"></td>';
         }
         content+= '</tr>';
     }
