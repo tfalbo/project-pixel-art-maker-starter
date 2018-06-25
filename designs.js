@@ -11,18 +11,13 @@ $('#sizePicker').on('submit', function(event){
 });
 
 
-// Coloring listener
-$('.cell').on('click', function(){
-    let color = color_picker.val();
-    $(this).css('background-color', color);
-});
 
 
 function makeGrid() {
     let row_count = row_input.val();
     let column_count = column_input.val();
 
-    // $('#pixelCanvas').innerHTML = '';
+    $('#pixelCanvas').innerHTML = '';
 
     var content = '';
 
@@ -33,5 +28,15 @@ function makeGrid() {
         }
         content+= '</tr>';
     }
-    $('#pixelCanvas').append(content);
+    
+
+    $('#pixelCanvas').html(content);
+
+    // Coloring listener
+    $('.cell').on('click', function(){
+        let color = color_picker.val();
+        $(this).css('background-color', color);
+    });
+
+
 }
